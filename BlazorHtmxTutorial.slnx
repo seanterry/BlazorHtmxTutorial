@@ -5,4 +5,5 @@
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>
+  <Project Path="BlazorHtmx/BlazorHtmx.csproj" />
 </Solution>
