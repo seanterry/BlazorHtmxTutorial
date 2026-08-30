@@ -6,10 +6,27 @@
 
 Welcome to your new app.
 
-<div>
+<div class="d-flex flex-column align-items-start gap-3">
     <button class="btn btn-primary"
-            hx-swap="outerHTML"
-            hx-get="/love-htmx">
+            hx-get="/love-htmx"
+            hx-target="next output">
         Click Me For Blazor + HTMX
     </button>
+    <output role="status">
+
+    </output>
+
+    <a href="/love-htmx"
+       hx-boost="true"
+       hx-target="next output"
+       hx-push-url="true">
+        Click Me For Boosted Nav
+    </a>
+    <output role="status">
+
+    </output>
+
+    <a href="/love-htmx">
+        Click Me For Full-Page Nav
+    </a>
 </div>
