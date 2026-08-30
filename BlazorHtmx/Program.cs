@@ -23,6 +23,7 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
+app.UseMiddleware<HtmxMiddleware>();
 app.MapRazorComponents<App>();
 
 app.MapPost( "/love-htmx-api", () => new RazorComponentResult<LoveHtmx>() );
