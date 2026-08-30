@@ -3,9 +3,14 @@
 @inject HtmxContext Htmx
 @if ( Htmx.Mode == HtmxMode.On )
 {
-    <LoveHtmxPartial/>
+    <LoveHtmxPartial WhoDoYouLove="@WhoDoYouLove"/>
 }
 else
 {
 
+}
+@code
+{
+    [SupplyParameterFromQuery]
+    public string? WhoDoYouLove { get; set; }
 }

@@ -1,5 +1,14 @@
 <div class="alert alert-info">
     <span class="text-lg-center">
         I ❤️ HTMX
+        @if ( !string.IsNullOrWhiteSpace( WhoDoYouLove ) )
+        {
+            <span>and @WhoDoYouLove</span>
+        }
     </span>
 </div>
+@code
+{
+    [Parameter]
+    public string? WhoDoYouLove { get; set; }
+}
