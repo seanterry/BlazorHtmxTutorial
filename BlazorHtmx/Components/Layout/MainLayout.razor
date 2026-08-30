@@ -1,3 +1,12 @@
 ﻿@using BlazorHtmx.Components.Layout.Rendering
+@using BlazorHtmx.Htmx
 @inherits LayoutComponentBase
-<MainLayoutFull Body="@Body"/>
+@inject HtmxContext Htmx
+@if ( Htmx.Mode == HtmxMode.Off )
+{
+    <MainLayoutFull Body="@Body"/>
+}
+else
+{
+    <HtmxLayout Body="@Body"/>
+}
