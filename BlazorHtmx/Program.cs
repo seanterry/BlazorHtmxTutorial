@@ -23,7 +23,4 @@ app.UseAntiforgery();
 app.MapStaticAssets();
 app.MapRazorComponents<App>();
 
-app.MapGet("/love-htmx",
-    () => new RazorComponentResult<LoveHtmx>());
-
 app.Run();
