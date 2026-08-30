@@ -1,2 +1,11 @@
 @page "/love-htmx"
-<LoveHtmxPartial/>
+@using BlazorHtmx.Htmx
+@inject HtmxContext Htmx
+@if ( Htmx.Mode == HtmxMode.On )
+{
+    <LoveHtmxPartial/>
+}
+else
+{
+
+}
