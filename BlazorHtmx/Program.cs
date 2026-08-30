@@ -23,4 +23,6 @@ app.UseAntiforgery();
 app.MapStaticAssets();
 app.MapRazorComponents<App>();
 
+app.MapPost( "/love-htmx-api", () => new RazorComponentResult<LoveHtmx>() );
+
 app.Run();

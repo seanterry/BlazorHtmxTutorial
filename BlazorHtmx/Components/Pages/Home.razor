@@ -7,11 +7,14 @@
 Welcome to your new app.
 
 <div class="d-flex flex-column align-items-start gap-3">
-    <button class="btn btn-primary"
-            hx-get="/love-htmx"
-            hx-target="next output">
-        Click Me For Blazor + HTMX
-    </button>
+    <form>
+        <AntiforgeryToken/>
+        <button class="btn btn-primary"
+                hx-post="/love-htmx-api"
+                hx-target="next output">
+            Click Me For Blazor + HTMX
+        </button>
+    </form>
     <output role="status">
 
     </output>
