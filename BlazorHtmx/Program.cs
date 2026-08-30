@@ -1,4 +1,5 @@
 using BlazorHtmx.Components;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,5 +22,8 @@ app.UseAntiforgery();
 
 app.MapStaticAssets();
 app.MapRazorComponents<App>();
+
+app.MapGet("/love-htmx",
+    () => new RazorComponentResult<LoveHtmx>());
 
 app.Run();
